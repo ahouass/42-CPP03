@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 12:03:31 by mohaben-          #+#    #+#             */
-/*   Updated: 2025/08/12 14:47:48 by mohaben-         ###   ########.fr       */
+/*   Created: 2025/08/12 15:09:21 by mohaben-          #+#    #+#             */
+/*   Updated: 2025/08/12 19:41:27 by mohaben-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <string>
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "ClapTrap.hpp"
 
-class	ClapTrap
+class	DiamondTrap : public ScavTrap, public FragTrap
 {
 	private:
-		std::string		name;
-		unsigned int	hit_pts;
-		unsigned int	energy_pts;
-		unsigned int	attack_pts;
+		std::string	name;
 	public:
-		ClapTrap( void );
-		ClapTrap( std::string _name );
-		ClapTrap( const ClapTrap& copy );
-		ClapTrap&	operator=( const ClapTrap& copy );
-		~ClapTrap( void );
-		void	attack( const std::string& target );
-		void	takeDamage( unsigned int amount );
-		void	beRepaired( unsigned int amount );
+		DiamondTrap( void );
+		DiamondTrap( std::string _name );
+		DiamondTrap( const DiamondTrap& copy );
+		DiamondTrap&	operator=( const DiamondTrap& copy );
+		~DiamondTrap( void );
+		void	attack( const std::string &target );
+		void	whoAmI( void );
 };

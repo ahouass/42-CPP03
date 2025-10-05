@@ -1,10 +1,10 @@
-NAME = clapTrap
+NAME = diamondTrap
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp ClapTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -14,7 +14,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-%.o: %.cpp ClapTrap.hpp
+%.o: %.cpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:

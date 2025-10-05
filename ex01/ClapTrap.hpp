@@ -6,7 +6,7 @@
 /*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 12:03:31 by mohaben-          #+#    #+#             */
-/*   Updated: 2025/08/12 14:47:48 by mohaben-         ###   ########.fr       */
+/*   Updated: 2025/08/12 13:46:52 by mohaben-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 
 class	ClapTrap
 {
-	private:
+	protected:
 		std::string		name;
 		unsigned int	hit_pts;
 		unsigned int	energy_pts;
 		unsigned int	attack_pts;
 	public:
 		ClapTrap( void );
-		ClapTrap( std::string _name );
+		ClapTrap( std::string name );
 		ClapTrap( const ClapTrap& copy );
 		ClapTrap&	operator=( const ClapTrap& copy );
 		~ClapTrap( void );
