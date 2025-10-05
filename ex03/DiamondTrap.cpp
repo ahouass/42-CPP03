@@ -3,27 +3,27 @@
 DiamondTrap::DiamondTrap( void ) : ClapTrap(), ScavTrap(), FragTrap(), name("No_name")
 {
 	ClapTrap::name = "No_name_clap_name";
-	hit_pts = FragTrap::hit_pts;
-	energy_pts = ScavTrap::energy_pts;
-	attack_pts = FragTrap::attack_pts;
+	hitPoints = FragTrap::hitPoints;
+	energyPoints = ScavTrap::energyPoints;
+	attackDamage = FragTrap::attackDamage;
 	std::cout << "DiamondTrap " << name << " default constructor called." << std::endl;
 }
 
 DiamondTrap::DiamondTrap( std::string _name ) : ClapTrap(), ScavTrap(), FragTrap(), name(_name)
 {
 	ClapTrap::name = _name + "_clap_name";
-	hit_pts = FragTrap::hit_pts;
-	energy_pts = ScavTrap::energy_pts;
-	attack_pts = FragTrap::attack_pts;
+	hitPoints = FragTrap::hitPoints;
+	energyPoints = ScavTrap::energyPoints;
+	attackDamage = FragTrap::attackDamage;
 	std::cout << "DiamondTrap " << name << " constructor called." << std::endl;
 }
 
 DiamondTrap::DiamondTrap( const DiamondTrap& copy ) : ClapTrap(), ScavTrap(), FragTrap(), name(copy.name)
 {
 	ClapTrap::name = copy.ClapTrap::name;
-	hit_pts = copy.hit_pts;
-	energy_pts = copy.energy_pts;
-	attack_pts = copy.attack_pts;
+	hitPoints = copy.hitPoints;
+	energyPoints = copy.energyPoints;
+	attackDamage = copy.attackDamage;
 	std::cout << "DiamondTrap " << name << " copy constructor called." << std::endl;
 }
 
@@ -33,9 +33,9 @@ DiamondTrap&	DiamondTrap::operator=( const DiamondTrap& copy )
 	{
 		name = copy.name;
 		ClapTrap::name = copy.ClapTrap::name;
-		hit_pts = copy.hit_pts;
-		energy_pts = copy.energy_pts;
-		attack_pts = copy.attack_pts;
+		hitPoints = copy.hitPoints;
+		energyPoints = copy.energyPoints;
+		attackDamage = copy.attackDamage;
 		std::cout << "DiamondTrap " << name << " copy assignment operator called." << std::endl;
 	}
 	return (*this);

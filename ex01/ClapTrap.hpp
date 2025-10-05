@@ -7,15 +7,17 @@ class	ClapTrap
 {
 	protected:
 		std::string		name;
-		unsigned int	hit_pts;
-		unsigned int	energy_pts;
-		unsigned int	attack_pts;
+		unsigned int	hitPoints;
+		unsigned int	energyPoints;
+		unsigned int	attackDamage;
+
 	public:
 		ClapTrap( void );
 		ClapTrap( std::string name );
 		ClapTrap( const ClapTrap& copy );
 		ClapTrap&	operator=( const ClapTrap& copy );
 		~ClapTrap( void );
+		
 		void	attack( const std::string& target );
 		void	takeDamage( unsigned int amount );
 		void	beRepaired( unsigned int amount );
