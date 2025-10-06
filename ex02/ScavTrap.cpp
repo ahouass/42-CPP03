@@ -2,41 +2,43 @@
 
 ScavTrap::ScavTrap( void )
 {
-	name = "No_name";
-	hitPoints = 100;
-	energyPoints = 50;
-	attackDamage = 20;
+	name			= "No_name";
+	hitPoints		= 100;
+	energyPoints	= 50;
+	attackDamage	= 20;
+	
 	std::cout << "ScavTrap " << name << " default constructor called." << std::endl;
 }
 
 ScavTrap::ScavTrap ( std::string _name )
 {
-	name = _name;
-	hitPoints = 100;
-	energyPoints = 50;
-	attackDamage = 20;
+	name			= _name;
+	hitPoints		= 100;
+	energyPoints	= 50;
+	attackDamage	= 20;
+
 	std::cout << "ScavTrap " << name << " constructor called." << std::endl;
 }
 
 ScavTrap::ScavTrap( const ScavTrap& copy )
 {
-	name = copy.name;
-	hitPoints = copy.hitPoints;
-	energyPoints = copy.energyPoints;
-	attackDamage = copy.attackDamage;
+	name			= copy.name;
+	hitPoints		= copy.hitPoints;
+	energyPoints	= copy.energyPoints;
+	attackDamage	= copy.attackDamage;
+
 	std::cout << "ScavTrap " << name << " copy constructor called." << std::endl;
 }
 
 ScavTrap&	ScavTrap::operator=( const ScavTrap& copy )
 {
-	if (this != &copy)
-	{
-		name = copy.name;
-		hitPoints = copy.hitPoints;
-		energyPoints = copy.energyPoints;
-		attackDamage = copy.attackDamage;
-		std::cout << "ScavTrap " << name << " copy assignment operator called." << std::endl;
-	}
+	name			= copy.name;
+	hitPoints		= copy.hitPoints;
+	energyPoints	= copy.energyPoints;
+	attackDamage	= copy.attackDamage;
+
+	std::cout << "ScavTrap " << name << " copy assignment operator called." << std::endl;
+
 	return (*this);
 }
 
@@ -58,8 +60,5 @@ void	ScavTrap::attack( const std::string& target )
 
 void	ScavTrap::guardGate( void )
 {
-	if (!hitPoints)
-		std::cout << "ScavTrap " << name << " can't be in Gate keeper mode (no hit point)." << std::endl;
-	else
-		std::cout << "ScavTrap " << name << " is now in Gate keeper mode." << std::endl;
+	std::cout << "ScavTrap " << name << " is now in Gate keeper mode." << std::endl;
 }
